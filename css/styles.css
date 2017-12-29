@@ -1,0 +1,410 @@
+body{
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+li{
+  margin: 0 !important;
+}
+button{ 
+  border:none; 
+  cursor:pointer; 
+  outline:none; 
+}
+@font-face {
+    font-family: 'glosaroman';
+    src: url('../fonts/glosa-roman-webfont.eot');
+    src: url('../fonts/glosa-roman-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/glosa-roman-webfont.woff2') format('woff2'),
+         url('../fonts/glosa-roman-webfont.woff') format('woff'),
+         url('../fonts/glosa-roman-webfont.ttf') format('truetype'),
+         url('../fonts/glosa-roman-webfont.svg#glosaroman') format('svg');
+}
+@font-face {
+    font-family: 'glosablack';
+    src: url('../fonts/glosa-black-webfont.eot');
+    src: url('../fonts/glosa-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/glosa-black-webfont.woff2') format('woff2'),
+         url('../fonts/glosa-black-webfont.woff') format('woff'),
+         url('../fonts/glosa-black-webfont.ttf') format('truetype'),
+         url('../fonts/glosa-black-webfont.svg#glosablack') format('svg');
+}
+
+/*** Controles ***/
+
+.controles{
+    bottom: 2%;
+    position: absolute;
+    right: 2%;
+    z-index: 100;
+  }
+    .controles button{
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      padding: 0;
+      text-indent: -99999px;
+    }      
+      button#playpausebtn{
+        background: url(../img/sprites.png) no-repeat -35px -89px;
+        height: 30px;
+        width: 28px;
+      }
+      button#mutebtn{
+        background:url(../img/sprites.png) no-repeat;
+        display: none;
+        width:5px;
+        height:14px;
+      }
+
+/*** Contenedor ***/
+
+.contenedor{
+  color: #fff;
+  margin: 0 auto;
+  position: relative;
+  width: 980px;
+}  
+  .header{
+    background: #111111;
+    color: #fff;
+    height: 50px;
+    position: absolute;
+    width: 980px;
+  }
+    .header a{
+      background: url(../img/sprites.png) no-repeat 0 0;
+      display: inline-block;
+      height: 18px;
+      margin: 15px 0 0 20px;
+      text-indent: -9999px;
+      width: 120px;
+    }
+    .header i{        
+      font: 15px/15px arial;
+    }
+    .header span{
+      font: 15px/40px 'glosaroman';      
+      left: 155px;
+      position: absolute;
+      text-transform: uppercase;
+      top: 6px;      
+    }
+    .box-texto-intro{
+      color: #fff;
+      position: absolute;
+      text-align: center;
+      top: 265px;
+    }
+      .box-texto-intro h1{
+        border-bottom: 2px solid rgba(255, 255, 255, 0.40);
+        border-top: 2px solid rgba(255, 255, 255, 0.40);        
+        display: inline-block;
+        font: 47px/47px 'glosablack';
+        margin: 0 auto;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        width: 620px;
+      }
+      .box-texto-intro p{
+        display: inline-block;
+        font: 16px/19px 'glosaroman';
+        vertical-align: top;
+        width: 100%;
+      }
+  .share{
+    display: inline-block;
+    margin-bottom: 20px;
+  }   
+    .share ul {
+      cursor: pointer;
+      float: left;
+      list-style-type: none;
+      list-style-image: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;            
+    }
+      .share li{             
+          display: inline-block;
+          margin: 0;
+          *display: inline;
+          vertical-align: top;
+          zoom:1;
+      }
+        .share li a {
+              background: url(../img/sprites.png) no-repeat;
+              border: 0;
+              display: block;
+              height: 11px; 
+              margin: 0 2px;                     
+              padding: 10px;
+              text-indent: -9999px;                          
+              width: 12px;
+          }
+          .share li a#facebook {
+              background-position: 0 -21px;
+          }
+            .share li a#facebook:hover {
+                background-position: 0 -54px;
+            }          
+          .share li a#twitter {
+              background-position: -34px -21px;   
+          } 
+            .share li a#twitter:hover {
+                background-position: -34px -54px;
+            } 
+  .box-texto{
+    left: 50px;
+    position: absolute;
+    top: 140px;
+  }
+  .bottom{
+    bottom: 5%;
+    top: inherit;
+  }
+  .center{
+    text-align: center;
+    left: 60px;
+    top: 275px;
+  }
+  .right{
+    left: inherit;
+    right: 50px;
+    top: 65px;
+  }  
+  .top{
+    top: 185px;
+  }  
+    .item{
+      border-right: 2px solid rgba(255, 255, 255, 0.40);
+      display: inline-block;
+      height: 157px;
+      margin: 0 15px;
+      padding-right: 15px;
+      vertical-align: top;
+      width: 165px;
+    }
+      .center h1{
+        margin: 0 auto !important;
+        width: 150px;
+      }
+      .center p{
+        font: 15px/18px 'glosaroman';
+      }
+    .box-texto h1{
+      font: 25px/25px 'glosablack';
+      margin: 0;
+    }
+    .box-texto p{
+      font: 15px/18px 'glosaroman';
+      margin: 3px auto;
+    }
+
+/*** Cifras ***/
+
+#value,
+#value-2,
+#value-3,
+#value-4{
+  color: #fff;
+  display: inline-block;
+  font: 80px/60px 'glosablack';
+  text-align: center;
+  width: 155px;  
+}
+.count{
+  color: #fff;
+  font: 80px/80px 'glosablack';  
+}
+
+
+/***
+ * BxSlider v4.2.2 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2014
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ ***/
+/** RESET AND LAYOUT
+===================================*/
+.bx-wrapper {  
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  *zoom: 1;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
+  .bx-wrapper img {
+    display: block;
+    max-width: 100%;    
+  }
+.bxslider {
+  margin: 0;
+  padding: 0;
+}
+ul.bxslider {
+  list-style: none;
+}
+.bx-viewport {
+  /*fix other elements on the page moving (on Chrome)*/
+  -webkit-transform: translatez(0);
+}
+/** THEME
+===================================*/
+.bx-wrapper {
+  /*background: #fff;
+  border: 5px solid #fff;  
+  box-shadow: 0 0 5px #ccc;  
+  -webkit-box-shadow: 0 0 5px #ccc;*/
+}
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  bottom: -30px;
+  position: absolute;  
+  width: 100%;
+}
+/* LOADER */
+.bx-wrapper .bx-loading {
+  background: url(../img/bx_loader.gif) center center no-repeat #ffffff;  
+  height: 100%;
+  left: 0;
+  min-height: 50px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+}
+/* PAGER */
+.bx-wrapper .bx-pager {
+  color: #666;
+  font: .85em/.85em arial;  
+  font-weight: bold;  
+  padding-top: 20px;
+  text-align: center;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: #666;
+  border-radius: 5px;
+  display: block;
+  height: 10px;
+  margin: 0 5px;
+  outline: 0;
+  text-indent: -9999px;  
+  width: 10px; 
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus {
+  background: #000;
+}
+.bx-wrapper .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;  
+}
+.bx-wrapper .bx-pager-item {
+  font-size: 0;
+  line-height: 0;
+}
+/* DIRECTION CONTROLS (NEXT / PREV) */
+.bx-wrapper .bx-prev {
+  background: url(../img/sprites.png) no-repeat -70px -22px;
+  top: 2%;
+  right: 47%;   
+}
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev:focus {
+  /*background: url(../img/sprites.png) no-repeat -70px -52px;
+  top: 2%;
+  right: 47%; */
+}
+.bx-wrapper .bx-next {
+  background: url(../img/sprites.png) no-repeat -70px -52px;
+  bottom: 2%;
+  right: 47%;  
+}
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next:focus {
+  /*background-position: -43px 0;*/
+}
+.bx-wrapper .bx-controls-direction a {
+  height: 24px;
+  /*margin-top: -16px;*/
+  outline: 0;
+  position: absolute;
+  text-indent: -9999px;
+  /*top: 50%; */
+  width: 45px; 
+  z-index: 9999;
+}
+.bx-wrapper .bx-controls-direction a.disabled {
+  display: none;
+}
+/* AUTO CONTROLS (START / STOP) */
+.bx-wrapper .bx-controls-auto {
+  text-align: center;
+}
+.bx-wrapper .bx-controls-auto .bx-start {
+  background: url(../img/controls.png) -86px -11px no-repeat;
+  display: block;
+  height: 11px; 
+  margin: 0 3px;
+  outline: 0; 
+  text-indent: -9999px;
+  width: 10px;
+}
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active,
+.bx-wrapper .bx-controls-auto .bx-start:focus {
+  background-position: -86px 0;
+}
+.bx-wrapper .bx-controls-auto .bx-stop {
+  background: url(../img/controls.png) -86px -44px no-repeat;
+  display: block;
+  height: 11px;
+  margin: 0 3px;  
+  outline: 0;  
+  text-indent: -9999px;
+  width: 9px;
+}
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active,
+.bx-wrapper .bx-controls-auto .bx-stop:focus {
+  background-position: -86px -33px;
+}
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+  text-align: left;
+  width: 80%;
+}
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+  right: 0;
+  width: 35px;
+}
+/* IMAGE CAPTIONS */
+.bx-wrapper .bx-caption {
+  background: #666;
+  background: rgba(80, 80, 80, 0.75);
+  bottom: 0;
+  left: 0;
+  position: absolute; 
+  width: 100%;
+}
+.bx-wrapper .bx-caption span {
+  color: #fff;
+  display: block;
+  font-family: Arial;  
+  font-size: .85em;
+  padding: 10px;
+}
